@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>What's your favourite sitcom? - Survey Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Racing+Sans+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="header">
+		<div class="survey-elem">
+			<h2>SURVEY FORM</h2>
+		</div>
+		<div class="header-container">
+			<h1 id="title">What's your favourite sitcom?</h1>
+      
+      <p id="description">Help us discover the best sitcoms</p>
+		</div>	
+	</div>
+
+	<div id="main">
+		<div class="container">
+			<form id="survey-form">
+				<div class="form-object">
+					<h4><span>Hello there sitcom fan</span></h4>
+					<ul>
+						<div class="box">
+							<div class="box-50">
+								<li>
+									<label for name="name" id="name-label"><p><b>What's your name?</b></p></label>
+									<input type="text" id="name" name="name" placeholder="Enter a your name" required>
+								</li>
+								<li>
+									<label for name="email" id="email-label"><p><b>Your email?</b></p></label>
+									<input type="email" id="email" name="email" placeholder="Enter your email" required>
+								</li>
+							</div>
+
+							<div class="box-50">
+								<li>
+									<label for name="number" id="number-label"><p><b>How old are you?</b></p></label>
+									<input type="number" id="number" name="number" placeholder="Enter your age" name="number" min="1" max="100">
+								</li>
+								<li>
+									<label for name="occupation" id="dropdown"><p><b>What's your occupation?</b></p></label>
+									<select id="dropdown" name="occupation">
+									    <option value="student">Student</option>
+									    <option value="self-employes" selected="">Self-employed</option>
+									    <option value="out-of-work">Out of work</option>
+									    <option value="retired">Retired</option>
+									  </select>
+								</li>
+							</div>
+						</div>
+					</ul>
+				</div>
+
+				<div class="form-object">
+					<h4><span>Would you be interested in watching a TV Sitcom?</span></h4>
+					<ul>
+						<li>
+							<input type="radio" name="radio" value="interested">
+							<label for="radio">Yes</label>
+						</li>
+						<li>
+							<input type="radio" name="radio" value="interested">
+							<label for="radio">No</label>
+						</li>
+						<li>
+							<input type="radio" name="radio" value="interested">
+							<label for="radio">Maybe</label>
+						</li>
+					</ul>
+				</div>
+
+				
+
+				<div class="form-object">
+					<h4><span>What are your favourite TV sitcoms?</span></h4>
+					<ul>
+						<div class="box">
+							<div class="box-50">
+							<li>
+								<input type="checkbox" name="best-sitcom" value="best-sitcom"><span class="checkmark"></span>
+								<label for="best-sitcom">Friends (1994)</label>
+
+							</li>
+							<li>
+								<input type="checkbox" name="best-sitcom" value="best-sitcom">
+								<label for="best-sitcom">The Office (2005)</label>
+							</li>
+							<li>
+								<input type="checkbox" name="best-sitcom" value="best-sitcom">
+								<label for="best-sitcom">Modern Family (2009)</label>
+							</li>
+							<li>
+								<input type="checkbox" name="best-sitcom" value="best-sitcom">
+								<label for="best-sitcom">How I met your mother (2005)</label>
+							</li>
+							</div>
+							<div class="box-50">
+								<li>
+									<input type="checkbox" name="best-sitcom" value="best-sitcom">
+									<label for="best-sitcom">Rules of Engagement (2007)</label>
+								</li>
+								<li>
+									<p><b>Other:</b></p>
+									<input type="text" name="other-sitcoms" placeholder="Type other sitcoms you like">
+								</li>
+							</div>
+						</div>
+					</ul>
+				</div>
+
+				<div class="form-object">
+					<h4><span>Leave a comment</span></h4>
+					<textarea type="textarea" name="comment"></textarea> 
+				</div>
+
+				<input type="submit" id="submit" value="Submit">
+
+			</form>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<p>Developed by <a href="https://github.com/valeriybercha" target="_blank">Valeriy Bercha</a></p>
+	    
+	    	<p>This page is created as a part of the <a href=
+	"https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form" target="_blank">freeCodeCamp</a> - "Responsive Web Design Projects" certification program</p> 
+	    
+		    <div class="footer-center">
+		      <a href="https://www.linkedin.com/in/valeriybercha/" target="_blank"><img src="img/linkedin.svg">
+		      <a href="https://github.com/valeriybercha" target="_blank"><img src="img/github.svg">
+		      <a href="https://www.facebook.com/valeriy.bercha" target="_blank"><img src="img/facebook.svg">
+		    </div>
+		</div>
+	</div>
+
+</body>
+
+</html>
