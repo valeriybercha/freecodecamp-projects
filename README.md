@@ -7,3 +7,4 @@ My projects on 'freeCodeCamp' certification program
 * Build a Tribute Page - [View on CodePen](https://codepen.io/vali/full/yLYeZdg)
 * Build a Survey Form - [View on CodePen](https://codepen.io/vali/full/eYpzggW)
 * Build a Product Page - [View on CodePen](https://codepen.io/vali/full/ZEbqvGq)
+* Build a Technical Documentation Page - [View on CodePen](https://codepen.io/vali/full/NWRyzaW)
