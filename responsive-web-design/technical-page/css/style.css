@@ -1,0 +1,121 @@
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: Roboto Mono,monospace;
+}
+
+
+p {
+  margin: 5px;
+  padding-bottom: 15px;
+}
+
+
+a {
+  color: #f36d33;
+}
+
+
+a:visited {
+  text-decoration: none;
+}
+
+
+nav {
+  position: fixed;
+  float: left;
+  width: 30%;
+}
+
+
+main {
+  float: right;
+  width: 70%;
+}
+
+
+ul.navigation {
+  list-style-type: none;
+}
+
+
+ul.navigation li {
+  padding: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  nav {
+    width: 100%;
+    float: none;
+    position: static;
+    margin: 0 auto;
+  }
+  main {
+    width: 100%;
+    float: none;
+  }
+}
+
+
+.table {
+  width: 95%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.table thead tr {
+    background-color: #999999;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.table th,
+.table td {
+    padding: 12px 15px;
+}
+
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #f36d33;
+}
+
+
+code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 95%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}

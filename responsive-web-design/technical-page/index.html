@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Technical Documantation Page - freeCodeCamp</title>
+    <meta name="description" content="Technical Documantation Page - freeCodeCamp">
+    <meta name="keywords" content="HTML, CSS, freeCodeCamp">
+    <meta name="author" content="Vali B.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&family=Ultra&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<nav id="navbar">
+		<header><h1>Python Basics Tutorial</h1></header>
+		<ul class="navigation">
+			<li><a class="nav-link" href="#Python_Basic_Syntax">Python Basic Syntax</a></li>
+			<li><a class="nav-link" href="#Python_Loops">Python Loops</a></li>
+			<li><a class="nav-link" href="#Python_Numbers">Python Numbers</a></li>
+			<li><a class="nav-link" href="#Python_Strings">Python Strings</a></li>
+			<li><a class="nav-link" href="#Python_Functions">Python Functions</a></li>
+		</ul>
+    </nav>
+
+    <main id="main-doc">
+    	    	
+    	<section id="Python_Basic_Syntax" class="main-section">
+    		
+    		<header><h1>Python Basic Syntax</h1></header>
+    		
+    		<p>The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages.</p>
+			
+			<h3>First Python Program</h3>
+			
+			<p>Let us execute programs in different modes of programming.</p>
+			
+			<h3>Interactive Mode Programming</h3>
+			
+			<p>Invoking the interpreter without passing a script file as a parameter brings up the following prompt &minus;</p>
+			
+			
+			<code>$ python<br>Python 2.4.3 (#1, Nov 11 2010, 13:34:43)<br>[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2<br>Type "help", "copyright", "credits" or "license" for more information.<br>&gt;&gt;&gt;</code>
+			
+			
+			<p>Type the following text at the Python prompt and press the Enter &minus;</p>
+			
+			<code>&gt;&gt;&gt; print "Hello, Python!"</code>
+			
+			<p>If you are running new version of Python, then you would need to use print statement with parenthesis as in <b>print ("Hello, Python!");</b>. However in Python version 2.4.3, this produces the following result &minus;</p>
+			
+			<code>Hello, Python!</code>
+			
+			<h3>Script Mode Programming</h3>
+			
+			<p>Invoking the interpreter with a script parameter begins execution of the script and continues until the script is finished. When the script is finished, the interpreter is no longer active.</p>
+			<p>Let us write a simple Python program in a script. Python files have extension <b>.py</b>. Type the following source code in a test.py file &minus;</p>
+			
+			<code>print "Hello, Python!"</code>
+			
+			<p>We assume that you have Python interpreter set in PATH variable. Now, try to run this program as follows &minus;</p>
+			
+			<code>$ python test.py</code>
+			
+			<p>This produces the following result &minus;</p>
+			
+			<code>Hello, Python!</code>
+			<p>Let us try another way to execute a Python script. Here is the modified test.py file &minus;</p>
+			
+			<code>#!/usr/bin/python<br>print "Hello, Python!"</code>
+			
+			<p>We assume that you have Python interpreter available in /usr/bin directory. Now, try to run this program as follows &minus;</p>
+			
+			<code>$ chmod +x test.py # This is to make file executable<br>$./test.py<br></code>
+			
+			<p>This produces the following result &minus;</p>
+			
+			<code>Hello, Python!</code>
+    	
+    	</section>
+
+    	<section id="Python_Loops" class="main-section">
+    		
+    		<header><h1>Python Loops</h1></header>
+    		
+    		<p>In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on. There may be a situation when you need to execute a block of code several number of times.</p>
+			<p>Programming languages provide various control structures that allow for more complicated execution paths.</p>
+			<p>A loop statement allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement &minus;</p>
+			
+			<img src="img/loop_architecture.jpeg" alt="Loop Architecture" />
+			
+			<p>Python programming language provides following types of loops to handle looping requirements.</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;">Sr.No.</th>
+						<th style="text-align:center;">Loop Type &amp; Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><b>while loop</b>
+						<p>Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><b>for loop</b>
+						<p>Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p></td>
+					</tr>
+					<tr>
+					<td>3</td>
+					<td><b>nested loops</b>
+					<p>You can use one or more loop inside any another while, for or do..while loop.</p></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<h3>Loop Control Statements</h3>
+			
+			<p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.<p>
+			<p>Python supports the following control statements. Click the following links to check their detail.</p>
+			<p>Let us go through the loop control statements briefly</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;">Sr.No.</th>
+						<th style="text-align:center;">Control Statement &amp; Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><b>break statement</b>
+						<p>Terminates the loop statement and transfers execution to the statement immediately following the loop.</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><b>continue statement</b>
+						<p>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</p></td>
+						</tr>
+					<tr>
+						<td>3</td>
+						<td><b>pass statement</b>
+						<p>The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute.</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+    	</section>
+
+    	<section id="Python_Numbers" class="main-section">
+    		
+    		<header><h1>Python Numbers</h1></header>
+
+    		<p>Number data types store numeric values. They are immutable data types, means that changing the value of a number data type results in a newly allocated object.</p>
+			<p>Number objects are created when you assign a value to them. For example &minus;</p>
+			
+			<code>var1 = 1<br>var2 = 10</code>
+
+			<p>You can also delete the reference to a number object by using the <b>del</b> statement. The syntax of the del statement is &minus;</p>
+			
+			<code>del var1[,var2[,var3[....,varN]]]]</code>
+			
+			<p>You can delete a single object or multiple objects by using the <b>del</b> statement. For example &minus;</p>
+			
+			<code>del var<br>del var_a, var_b</code>
+			
+			<p>Python supports four different numerical types &minus;</p>
+			
+			<ul>
+				<li><p><b>int (signed integers)</b> &minus; They are often called just integers or ints, are positive or negative whole numbers with no decimal point.</p></li>
+				<li><p><b>long (long integers )</b> &minus; Also called longs, they are integers of unlimited size, written like integers and followed by an uppercase or lowercase L.</p></li>
+				<li><p><b>float (floating point real values)</b> &minus; Also called floats, they represent real numbers and are written with a decimal point dividing the integer and fractional parts. Floats may also be in scientific notation, with E or e indicating the power of 10 (2.5e2 = 2.5 x 10<sup>2</sup> = 250).</p></li>
+				<li><p><b>complex (complex numbers)</b> &minus; are of the form a + bJ, where a and b are floats and J (or j) represents the square root of -1 (which is an imaginary number). The real part of the number is a, and the imaginary part is b. Complex numbers are not used much in Python programming.</p></li>
+			</ul>
+
+			<h3>Examples</h3>
+			
+			<p>Here are some examples of numbers</p>
+			
+			<table class="table" style="text-align:center;">
+				<thead>
+					<tr>
+						<th style="text-align:center;">int</th>
+						<th style="text-align:center;">long</th>
+						<th style="text-align:center;">float</th>
+						<th style="text-align:center;">complex</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>10</td>
+						<td>51924361L</td>
+						<td>0.0</td>
+						<td>3.14j</td>
+					</tr>
+					<tr>
+						<td>100</td>
+						<td>-0x19323L</td>
+						<td>15.20</td>
+						<td>45.j</td>
+					</tr>
+					<tr>
+						<td>-786</td>
+						<td>0122L</td>
+						<td>-21.9</td>
+						<td>9.322e-36j</td>
+					</tr>
+					<tr>
+						<td>080</td>
+						<td>0xDEFABCECBDAECBFBAEL</td>
+						<td>32.3+e18</td>
+						<td>.876j</td>
+					</tr>
+					<tr>
+						<td>-0490</td>
+						<td>535633629843L</td>
+						<td>-90.</td>
+						<td>-.6545+0J</td>
+					</tr>
+					<tr>
+						<td>-0x260</td>
+						<td>-052318172735L</td>
+						<td>-32.54e100</td>
+						<td>3e+26J</td>
+					</tr>
+					<tr>
+						<td>0x69</td>
+						<td>-4721885298529L</td>
+						<td>70.2-E12</td>
+						<td>4.53e-7j</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<ul>
+				<li><p>Python allows you to use a lowercase L with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</p></li>
+				<li><p>A complex number consists of an ordered pair of real floating point numbers denoted by a + bj, where a is the real part and b is the imaginary part of the complex number.</p></li>
+			</ul>
+			
+			<h3>Number Type Conversion</h3>
+			
+			<p>Python converts numbers internally in an expression containing mixed types to a common type for evaluation. But sometimes, you need to coerce a number explicitly from one type to another to satisfy the requirements of an operator or function parameter.</p>
+			
+			<ul>
+				<li><p>Type <b>int(x)</b> to convert x to a plain integer.</p></li>
+				<li><p>Type <b>long(x)</b> to convert x to a long integer.</p></li>
+				<li><p>Type <b>float(x)</b> to convert x to a floating-point number.</p></li>
+				<li><p>Type <b>complex(x)</b> to convert x to a complex number with real part x and imaginary part zero.</p></li>
+				<li><p>Type <b>complex(x, y)</b> to convert x and y to a complex number with real part x and imaginary part y. x and y are numeric expressions</p></li>
+			</ul>
+
+			<h3>Mathematical Functions</h3>
+
+			<p>Python includes following functions that perform mathematical calculations.</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:10%;">Sr.No.</th>
+						<th style="text-align:center;">Function &amp; Returns ( description )</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><b>abs(x)</b>
+						<p>The absolute value of x: the (positive) distance between x and zero.</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><b>ceil(x)</b>
+						<p>The ceiling of x: the smallest integer not less than x</p></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><b>cmp(x, y)</b>
+						<p>-1 if x &lt; y, 0 if x == y, or 1 if x &gt; y</p></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><b>exp(x)</b>
+						<p>The exponential of x: e<sup>x</sup></p></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td><b>fabs(x)</b>
+						<p>The absolute value of x.</p></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><b>floor(x)</b>
+						<p>The floor of x: the largest integer not greater than x</p></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td><b>log(x)</b>
+						<p>The natural logarithm of x, for x&gt; 0</p></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td><b>log10(x)</b>
+						<p>The base-10 logarithm of x for x&gt; 0.</p></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td><b>max(x1, x2,...)</b>
+						<p>The largest of its arguments: the value closest to positive infinity</p></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td><b>min(x1, x2,...)</b>
+						<p>The smallest of its arguments: the value closest to negative infinity</p></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td><b>modf(x)</b>
+						<p>The fractional and integer parts of x in a two-item tuple. Both parts have the same sign as x. The integer part is returned as a float.</p></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td><b>pow(x, y)</b>
+						<p>The value of x**y.</p></td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td><b>round(x [,n])</b>
+						<p><b>x</b> rounded to n digits from the decimal point. Python rounds away from zero as a tie-breaker: round(0.5) is 1.0 and round(-0.5) is -1.0.</p></td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td><b>sqrt(x)</b>
+						<p>The square root of x for x &gt; 0</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Random Number Functions</h2>
+			
+			<p>Random numbers are used for games, simulations, testing, security, and privacy applications. Python includes following functions that are commonly used.</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:10%">Sr.No.</th>
+						<th style="text-align:center;">Function &amp; Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><b>choice(seq)</b>
+						<p>A random item from a list, tuple, or string.</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><b>randrange ([start,] stop [,step])</b>
+						<p>A randomly selected element from range(start, stop, step)</p></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><b>random()</b>
+						<p>A random float r, such that 0 is less than or equal to r and r is less than 1</p></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><b>seed([x])</b>
+						<p>Sets the integer starting value used in generating random numbers. Call this function before calling any other random module function. Returns None.</p></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td><b>shuffle(lst)</b>
+						<p>Randomizes the items of a list in place. Returns None.</p></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><b>uniform(x, y)</b>
+						<p>A random float r, such that x is less than or equal to r and r is less than y</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Trigonometric Functions</h3>
+			
+			<p>Python includes following functions that perform trigonometric calculations.</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:10%">Sr.No.</th>
+						<th style="text-align:center;">Function &amp; Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><b>acos(x)</b>
+						<p>Return the arc cosine of x, in radians.</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><b>asin(x)</b>
+						<p>Return the arc sine of x, in radians.</p></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><b>atan(x)</b>
+						<p>Return the arc tangent of x, in radians.</p></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><b>atan2(y, x)</b>
+						<p>Return atan(y / x), in radians.</p></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td><b>cos(x)</b>
+						<p>Return the cosine of x radians.</p></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><b>hypot(x, y)</b>
+						<p>Return the Euclidean norm, sqrt(x*x + y*y).</p></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td><b>sin(x)</b>
+						<p>Return the sine of x radians.</p></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td><b>tan(x)</b>
+						<p>Return the tangent of x radians.</p></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td><b>degrees(x)</b>
+						<p>Converts angle x from radians to degrees.</p></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td><b>radians(x)</b>
+						<p>Converts angle x from degrees to radians.</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Mathematical Constants</h3>
+			
+			<p>The module also defines two mathematical constants &minus;</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:10%">Sr.No.</th>
+						<th style="text-align:center;">Constants &amp; Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><p><b>pi</b></p>
+						<p>The mathematical constant pi.</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><p><b>e</b></p>
+						<p>The mathematical constant e.</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+    	</section>
+
+    	<section id="Python_Strings" class="main-section">
+    		
+    		<header><h1>Python Strings</h1></header>
+
+    		<p>Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes. Python treats single quotes the same as double quotes. Creating strings is as simple as assigning a value to a variable. For example &minus;</p>
+			
+			<code>var1 = 'Hello World!'<br>var2 = "Python Programming"</code>
+
+			<h3>Accessing Values in Strings</h3>
+
+			<p>Python does not support a character type; these are treated as strings of length one, thus also considered a substring.</p>
+			<p>To access substrings, use the square brackets for slicing along with the index or indices to obtain your substring. For example &minus;</p>
+
+			<code>#!/usr/bin/python<br>var1 = 'Hello World!'<br>var2 = "Python Programming"<br>print "var1[0]: ", var1[0]<br>print "var2[1:5]: ", var2[1:5]</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>var1[0]:  H<br>var2[1:5]:  ytho</code>
+
+			<h3>Updating Strings</h3>
+
+			<p>You can "update" an existing string by (re)assigning a variable to another string. The new value can be related to its previous value or to a completely different string altogether. For example &minus;</p>
+			
+			<code>#!/usr/bin/python<br>var1 = 'Hello World!'<br>print "Updated String :- ", var1[:6] + 'Python'</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>Updated String :-  Hello Python</code>
+
+			<h3>Escape Characters</h3>
+			
+			<p>Following table is a list of escape or non-printable characters that can be represented with backslash notation.</p>
+			<p>An escape character gets interpreted; in a single quoted as well as double quoted strings.</p>
+			
+			<table class="table" style="text-align:center;">
+				<thead>
+					<tr>
+						<th style="text-align:center;">Backslash notation</th>
+						<th style="text-align:center;">Hexadecimal character</th>
+						<th class="ts">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>\a</td>
+						<td>0x07</td>
+						<td>Bell or alert</td>
+					</tr>
+					<tr>
+						<td>\b</td>
+						<td>0x08</td>
+						<td>Backspace</td>
+					</tr>
+					<tr>
+						<td>\cx</td>
+						<td>&nbsp;</td>
+						<td>Control-x</td>
+					</tr>
+					<tr>
+						<td>\C-x</td>
+						<td>&nbsp;</td>
+						<td>Control-x</td>
+					</tr>
+					<tr>
+						<td>\e</td>
+						<td>0x1b</td>
+						<td>Escape</td>
+					</tr>
+					<tr>
+						<td>\f</td>
+						<td>0x0c</td>
+						<td>Formfeed</td>
+					</tr>
+					<tr>
+						<td>\M-\C-x</td>
+						<td>&nbsp;</td>
+						<td>Meta-Control-x</td>
+					</tr>
+					<tr>
+						<td>\n</td>
+						<td>0x0a</td>
+						<td>Newline</td>
+					</tr>
+					<tr>
+						<td>\nnn</td>
+						<td>&nbsp;</td>
+						<td>Octal notation, where n is in the range 0.7</td>
+					</tr>
+					<tr>
+						<td>\r</td>
+						<td>0x0d</td>
+						<td>Carriage return</td>
+					</tr>
+					<tr>
+						<td>\s</td>
+						<td>0x20</td>
+						<td>Space</td>
+					</tr>
+					<tr>
+						<td>\t</td>
+						<td>0x09</td>
+						<td>Tab</td>
+					</tr>
+					<tr>
+						<td>\v</td>
+						<td>0x0b</td>
+						<td>Vertical tab</td>
+					</tr>
+					<tr>
+						<td>\x</td>
+						<td>&nbsp;</td>
+						<td>Character x</td>
+					</tr>
+					<tr>
+						<td>\xnn</td>
+						<td>&nbsp;</td>
+						<td>Hexadecimal notation, where n is in the range 0.9, a.f, or A.F</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>String Special Operators</h3>
+
+			<p>Assume string variable <b>a</b> holds 'Hello' and variable <b>b</b> holds 'Python', then &minus;</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:10%">Operator</th>
+						<th style="text-align:center;width:45%">Description</th>
+						<th style="text-align:center;">Example</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>+</td>
+						<td>Concatenation - Adds values on either side of the operator</td>
+						<td>a + b will give HelloPython</td>
+					</tr>
+					<tr>
+						<td>*</td>
+						<td>Repetition - Creates new strings, concatenating multiple copies of the same
+						string</td>
+						<td>a*2 will give -HelloHello</td>
+					</tr>
+					<tr>
+						<td>[]</td>
+						<td>Slice - Gives the character from the given index</td>
+						<td>a[1] will give e</td>
+					</tr>
+					<tr>
+						<td>[ : ]</td>
+						<td>Range Slice - Gives the characters from the given range</td>
+						<td>a[1:4] will give ell</td>
+					</tr>
+					<tr>
+						<td>in</td>
+						<td>Membership - Returns true if a character exists in the given string</td>
+						<td>H in a will give 1</td>
+					</tr>
+					<tr>
+						<td>not in </td>
+						<td>Membership - Returns true if a character does not exist in the given string</td>
+						<td>M not in a will give 1</td>
+					</tr>
+					<tr>
+						<td>r/R</td>
+						<td>Raw String - Suppresses actual meaning of Escape characters. The syntax for raw strings is exactly the same as for normal strings with the exception of the raw string operator, the letter "r," which precedes the quotation marks. The "r" can be lowercase (r) or uppercase (R) and must be placed immediately preceding the first quote mark.</td>
+						<td>print r'\n' prints \n and print R'\n'prints \n</td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td>Format - Performs String formatting</td>
+						<td>See at next section</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>String Formatting Operator</h3>
+			
+			<p>One of Python's coolest features is the string format operator %. This operator is unique to strings and makes up for the pack of having functions from C's printf() family. Following is a simple example &minus;</p>
+
+			<code>#!/usr/bin/python<br>print "My name is %s and weight is %d kg!" % ('Zara', 21)</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>My name is Zara and weight is 21 kg!</code>
+			
+			<p>Here is the list of complete set of symbols which can be used along with % &minus;</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:30%">Format Symbol</th>
+						<th style="text-align:center;">Conversion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>%c</td>
+						<td>character</td>
+					</tr>
+					<tr>
+						<td>%s</td>
+						<td>string conversion via str() prior to formatting</td>
+					</tr>
+					<tr>
+						<td>%i</td>
+						<td>signed decimal integer</td>
+					</tr>
+					<tr>
+						<td>%d</td>
+						<td>signed decimal integer</td>
+					</tr>
+					<tr>
+						<td>%u</td>
+						<td>unsigned decimal integer</td>
+					</tr>
+					<tr>
+						<td>%o</td>
+						<td>octal integer</td>
+					</tr>
+					<tr>
+						<td>%x</td>
+						<td>hexadecimal integer (lowercase letters)</td>
+					</tr>
+					<tr>
+						<td>%X</td>
+						<td>hexadecimal integer (UPPERcase letters)</td>
+					</tr>
+					<tr>
+						<td>%e</td>
+						<td>exponential notation (with lowercase 'e')</td>
+					</tr>
+					<tr>
+						<td>%E</td>
+						<td>exponential notation (with UPPERcase 'E')</td>
+					</tr>
+					<tr>
+						<td>%f</td>
+						<td>floating point real number</td>
+					</tr>
+					<tr>
+						<td>%g</td>
+						<td>the shorter of %f and %e</td>
+					</tr>
+					<tr>
+						<td>%G</td>
+						<td>the shorter of %f and %E</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Other supported symbols and functionality are listed in the following table &minus;</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:30%">Symbol</th>
+						<th style="text-align:center;">Functionality</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>*</td>
+						<td>argument specifies width or precision</td>
+					</tr>
+					<tr>
+						<td>-</td>
+						<td>left justification</td>
+					</tr>
+					<tr>
+						<td>+</td>
+						<td>display the sign</td>
+					</tr>
+					<tr>
+						<td>&lt;sp&gt;</td>
+						<td>leave a blank space before a positive number</td>
+					</tr>
+					<tr>
+						<td>#</td>
+						<td>add the octal leading zero ( '0' ) or hexadecimal leading '0x' or '0X', depending on whether 'x' or 'X' were used.</td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td>pad from left with zeros (instead of spaces)</td>
+					</tr>
+						<tr>
+						<td>%</td>
+						<td>'%%' leaves you with a single literal '%'</td>
+					</tr>
+					<tr>
+						<td>(var)</td>
+						<td>mapping variable (dictionary arguments)</td>
+					</tr>
+					<tr>
+						<td>m.n.</td>
+						<td>m is the minimum total width and n is the number of digits to display after the decimal point (if appl.)</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Triple Quotes</h3>
+
+			<p>Python's triple quotes comes to the rescue by allowing strings to span multiple lines, including verbatim NEWLINEs, TABs, and any other special characters.</p>
+			<p>The syntax for triple quotes consists of three consecutive <b>single or double</b> quotes.</p>
+			
+			<code>#!/usr/bin/python<br>para_str = """this is a long string that is made up of<br>several lines and non-printable characters such as<br>TAB ( \t ) and they will show up that way when displayed.<br>NEWLINEs within the string, whether explicitly given like<br>this within the brackets [ \n ], or just a NEWLINE within<br>the variable assignment will also show up.<br>"""<br>print para_str</code>
+
+			<p>When the above code is executed, it produces the following result. Note how every single special character has been converted to its printed form, right down to the last NEWLINE at the end of the string between the "up." and closing triple quotes. Also note that NEWLINEs occur either with an explicit carriage return at the end of a line or its escape code (\n) &minus;</p>
+			
+			<code>this is a long string that is made up of<br>several lines and non-printable characters such as<br>TAB (    ) and they will show up that way when displayed.<br>NEWLINEs within the string, whether explicitly given like<br>this within the brackets [<br>], or just a NEWLINE within<br>the variable assignment will also show up.</code>
+
+			<p>Raw strings do not treat the backslash as a special character at all. Every character you put into a raw string stays the way you wrote it &minus;</p>
+			
+			<code>#!/usr/bin/python<br>print 'C:\\nowhere'</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>C:\nowhere</code>
+
+			<p>Now let's make use of raw string. We would put expression in <b>r'expression'</b> as follows &minus;</p>
+			
+			<code>#!/usr/bin/python<br>print r'C:\\nowhere'</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>C:\\nowhere</code>
+
+			<h3>Unicode String</h3>
+
+			<p>Normal strings in Python are stored internally as 8-bit ASCII, while Unicode strings are stored as 16-bit Unicode. This allows for a more varied set of characters, including special characters from most languages in the world. I'll restrict my treatment of Unicode strings to the following &minus;</p>
+			
+			<code>#!/usr/bin/python<br>print u'Hello, world!'</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>Hello, world!</code>
+
+			<p>As you can see, Unicode strings use the prefix u, just as raw strings use the prefix r.</p>
+			
+			<h3>Built-in String Methods</h3>
+
+			<p>Python includes the following built-in methods to manipulate strings &minus;</p>
+			
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="text-align:center;width:10%">Sr.No.</th>
+						<th style="text-align:center;">Methods with Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td><b>capitalize()</b>
+						<p>Capitalizes first letter of string</p></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><b>center(width, fillchar)</b>
+						<p>Returns a space-padded string with the original string centered to a total of width columns.</p></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><b>count(str, beg= 0,end=len(string))</b>
+						<p>Counts how many times str occurs in string or in a substring of string if starting index beg and ending index end are given.</p></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><b>decode(encoding='UTF-8',errors='strict')</b>
+						<p>Decodes the string using the codec registered for encoding. encoding defaults to the default string encoding.</p></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td><b>encode(encoding='UTF-8',errors='strict')</b>
+						<p>Returns encoded string version of string; on error, default is to raise a ValueError unless errors is given with 'ignore' or 'replace'.</p></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><b>endswith(suffix, beg=0, end=len(string))</b>
+						<p>Determines if string or a substring of string (if starting index beg and ending index end are given) ends with suffix; returns true if so and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td><b>expandtabs(tabsize=8)</b>
+						<p>Expands tabs in string to multiple spaces; defaults to 8 spaces per tab if tabsize not provided.</p></td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td><b>find(str, beg=0 end=len(string))</b>
+						<p>Determine if str occurs in string or in a substring of string if starting index beg and ending index end are given returns index if found and -1 otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td><b>index(str, beg=0, end=len(string))</b>
+						<p>Same as find(), but raises an exception if str not found.</p></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td><b>isalnum()</b>
+						<p>Returns true if string has at least 1 character and all characters are alphanumeric and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td><b>isalpha()</b>
+						<p>Returns true if string has at least 1 character and all characters are alphabetic and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td><b>isdigit()</b>
+						<p>Returns true if string contains only digits and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td><b>islower()</b>
+						<p>Returns true if string has at least 1 cased character and all cased characters are in lowercase and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td><b>isnumeric()</b>
+						<p>Returns true if a unicode string contains only numeric characters and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td><b>isspace()</b>
+						<p>Returns true if string contains only whitespace characters and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>16</td>
+						<td><b>istitle()</b>
+						<p>Returns true if string is properly "titlecased" and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>17</td>
+						<td><b>isupper()</b>
+						<p>Returns true if string has at least one cased character and all cased characters are in uppercase and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>18</td>
+						<td><b>join(seq)</b>
+						<p>Merges (concatenates) the string representations of elements in sequence seq into a string, with separator string.</p></td>
+					</tr>
+					<tr>
+						<td>19</td>
+						<td><b>len(string)</b>
+						<p>Returns the length of the string</p></td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td><b>ljust(width[, fillchar])</b>
+						<p>Returns a space-padded string with the original string left-justified to a total of width columns.</p></td>
+					</tr>
+					<tr>
+						<td>21</td>
+						<td><b>lower()</b>
+						<p>Converts all uppercase letters in string to lowercase.</p></td>
+					</tr>
+					<tr>
+						<td>22</td>
+						<td><b>lstrip()</b>
+						<p>Removes all leading whitespace in string.</p></td>
+					</tr>
+					<tr>
+						<td>23</td>
+						<td><b>maketrans()</b>
+						<p>Returns a translation table to be used in translate function.</p></td>
+					</tr>
+					<tr>
+						<td>24</td>
+						<td><b>max(str)</b>
+						<p>Returns the max alphabetical character from the string str.</p></td>
+					</tr>
+					<tr>
+						<td>25</td>
+						<td><b>min(str)</b>
+						<p>Returns the min alphabetical character from the string str.</p></td>
+					</tr>
+					<tr>
+						<td>26</td>
+						<td><b>replace(old, new [, max])</b>
+						<p>Replaces all occurrences of old in string with new or at most max occurrences if max given.</p></td>
+					</tr>
+					<tr>
+						<td>27</td>
+						<td><b>rfind(str, beg=0,end=len(string))</b>
+						<p>Same as find(), but search backwards in string.</p></td>
+					</tr>
+					<tr>
+						<td>28</td>
+						<td><b>rindex( str, beg=0, end=len(string))</b>
+						<p>Same as index(), but search backwards in string.</p></td>
+					</tr>
+					<tr>
+						<td>29</td>
+						<td><b>rjust(width,[, fillchar])</b>
+						<p>Returns a space-padded string with the original string right-justified to a total of width columns.</p></td>
+					</tr>
+					<tr>
+						<td>30</td>
+						<td><b>rstrip()</b>
+						<p>Removes all trailing whitespace of string.</p></td>
+					</tr>
+					<tr>
+						<td>31</td>
+						<td><b>split(str="", num=string.count(str))</b>
+						<p>Splits string according to delimiter str (space if not provided) and returns list of substrings; split into at most num substrings if given.</p></td>
+					</tr>
+					<tr>
+						<td>32</td>
+						<td><b>splitlines( num=string.count('\n'))</b>
+						<p>Splits string at all (or num) NEWLINEs and returns a list of each line with NEWLINEs removed.</p></td>
+					</tr>
+					<tr>
+						<td>33</td>
+						<td><b>startswith(str, beg=0,end=len(string))</b>
+						<p>Determines if string or a substring of string (if starting index beg and ending index end are given) starts with substring str; returns true if so and false otherwise.</p></td>
+					</tr>
+					<tr>
+						<td>34</td>
+						<td><b>strip([chars])</b>
+						<p>Performs both lstrip() and rstrip() on string.</p></td>
+					</tr>
+					<tr>
+						<td>35</td>
+						<td><b>swapcase()</b>
+						<p>Inverts case for all letters in string.</p></td>
+					</tr>
+					<tr>
+						<td>36</td>
+						<td><b>title()</b>
+						<p>Returns "titlecased" version of string, that is, all words begin with uppercase and the rest are lowercase.</p></td>
+					</tr>
+					<tr>
+						<td>37</td>
+						<td><b>translate(table, deletechars="")</b>
+						<p>Translates string according to translation table str(256 chars), removing those in the del string.</p></td>
+					</tr>
+					<tr>
+						<td>38</td>
+						<td><b>upper()</b>
+						<p>Converts lowercase letters in string to uppercase.</p></td>
+					</tr>
+					<tr>
+						<td>39</td>
+						<td><b>zfill (width)</b>
+						<p>Returns original string leftpadded with zeros to a total of width characters; intended for numbers, zfill() retains any sign given (less one zero).</p></td>
+					</tr>
+					<tr>
+						<td>40</td>
+						<td><b>isdecimal()</b>
+						<p>Returns true if a unicode string contains only decimal characters and false otherwise.</p></td>
+					</tr>
+				</tbody>
+			</table>
+
+    	</section>
+    	
+    	<section id="Python_Functions" class="main-section">
+    		
+    		<header><h1>Python Functions</h1></header>
+
+    		<p>A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.</p>
+			<p>As you already know, Python gives you many built-in functions like print(), etc. but you can also create your own functions. These functions are called <i>user-defined functions.</i></p>
+			
+			<h3>Defining a Function</h3>
+			
+			<p>You can define functions to provide the required functionality. Here are simple rules to define a function in Python.</p>
+			
+			<ul>
+				<li><p>Function blocks begin with the keyword <b>def</b> followed by the function name and parentheses ( ( ) ).</p></li>
+				<li><p>Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.</p></li>
+				<li><p>The first statement of a function can be an optional statement - the documentation string of the function or <i>docstring</i>.</p></li>
+				<li><p>The code block within every function starts with a colon (:) and is indented.</p></li>
+				<li><p>The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.</p></li>
+			</ul>
+			
+			<h3>Syntax</h3>
+			
+			<code>def functionname( parameters ):<br>"function_docstring"<br>function_suite<br>return [expression]</code>
+
+			<p>By default, parameters have a positional behavior and you need to inform them in the same order that they were defined.</p>
+			
+			<h3>Example</h3>
+			
+			<p>The following function takes a string as input parameter and prints it on standard screen.</p>
+			
+			<code>def printme( str ):<br>"This prints a passed string into this function"<br>print str<br>return</code>
+
+			<h3>Calling a Function</h3>
+			
+			<p>Defining a function only gives it a name, specifies the parameters that are to be included in the function and structures the blocks of code.</p>
+			<p>Once the basic structure of a function is finalized, you can execute it by calling it from another function or directly from the Python prompt. Following is the example to call printme() function &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def printme( str ):<br>"This prints a passed string into this function"<br>print str<br>return;<br># Now you can call printme function<br>printme("I'm first call to user defined function!")<br>printme("Again second call to the same function")</code>
+
+			<p>When the above code is executed, it produces the following result &minus;</p>
+			
+			<code>I'm first call to user defined function!<br>Again second call to the same function</code>
+
+			<h3>Pass by reference vs value</h3>
+
+			<p>All parameters (arguments) in the Python language are passed by reference. It means if you change what a parameter refers to within a function, the change also reflects back in the calling function. For example &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def changeme( mylist ):<br>"This changes a passed list into this function"<br>mylist.append([1,2,3,4]);<br>print "Values inside the function: ", mylist<br>return<br># Now you can call changeme function<br>mylist = [10,20,30];<br>changeme( mylist );<br>print "Values outside the function: ", mylist</code>
+
+			<p>Here, we are maintaining reference of the passed object and appending values in the same object. So, this would produce the following result &minus;</p>
+			
+			<code>Values inside the function:  [10, 20, 30, [1, 2, 3, 4]]<br>Values outside the function:  [10, 20, 30, [1, 2, 3, 4]]</code>
+
+			<p>There is one more example where argument is being passed by reference and the reference is being overwritten inside the called function.</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def changeme( mylist ):<br>"This changes a passed list into this function"<br>mylist = [1,2,3,4]; # This would assig new reference in mylist<br>print "Values inside the function: ", mylist<br>return<br># Now you can call changeme function<br>mylist = [10,20,30];<br>hangeme( mylist );<br>print "Values outside the function: ", mylist</code>
+
+			<p>The parameter <i>mylist</i> is local to the function changeme. Changing mylist within the function does not affect <i>mylist</i>. The function accomplishes nothing and finally this would produce the following result &minus;</p>
+			
+			<code>Values inside the function:  [1, 2, 3, 4]<br>Values outside the function:  [10, 20, 30]</code>
+
+			<h3>Function Arguments</h3>
+			
+			<p>You can call a function by using the following types of formal arguments &minus;</p>
+			
+			<ul>
+				<li>Required arguments</li>
+				<li>Keyword arguments</li>
+				<li>Default arguments</li>
+				<li>Variable-length arguments</li>
+			</ul>
+			
+			<h3>Required arguments</h3>
+
+			<p>Required arguments are the arguments passed to a function in correct positional order. Here, the number of arguments in the function call should match exactly with the function definition.</p>
+			<p>To call the function <i>printme()</i>, you definitely need to pass one argument, otherwise it gives a syntax error as follows &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def printme( str ):<br>"This prints a passed string into this function"<br>print str<br>return;<br># Now you can call printme function<br>printme()</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Traceback (most recent call last):<br>File "test.py", line 11, in &lt;module&gt;<br>printme();<br>TypeError: printme() takes exactly 1 argument (0 given)</code>
+
+			<h3>Keyword arguments</h3>
+			
+			<p>Keyword arguments are related to the function calls. When you use keyword arguments in a function call, the caller identifies the arguments by the parameter name.</p>
+			<p>This allows you to skip arguments or place them out of order because the Python interpreter is able to use the keywords provided to match the values with parameters. You can also make keyword calls to the <i>printme()</i> function in the following ways &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def printme( str ):<br>"This prints a passed string into this function"<br>print str<br>return;<br># Now you can call printme function<br>printme( str = "My string")</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>My string</code>
+			
+			<p>The following example gives more clear picture. Note that the order of parameters does not matter.</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def printinfo( name, age )<br>"This prints a passed info into this function"<br>print "Name: ", name<br>print "Age ", age<br>return;<br># Now you can call printinfo function<br>printinfo( age=50, name="miki" )</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Name:  miki<br>Age  50</code>
+
+			<h3>Default arguments</h3>
+			
+			<p>A default argument is an argument that assumes a default value if a value is not provided in the function call for that argument. The following example gives an idea on default arguments, it prints default age if it is not passed &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def printinfo( name, age = 35 ):<br>"This prints a passed info into this function"<br>print "Name: ", name<br>print "Age ", age<br>return;<br># Now you can call printinfo function<br>printinfo( age=50, name="miki" )<br>printinfo( name="miki" )</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Name:  miki<br>Age  50<br>Name:  miki<br>Age  35</code>
+
+			<h3>Variable-length arguments</h3>
+			
+			<p>You may need to process a function for more arguments than you specified while defining the function. These arguments are called <i>variable-length</i> arguments and are not named in the function definition, unlike required and default arguments.</p>
+			<p>Syntax for a function with non-keyword variable arguments is this &minus;</p>
+			
+			<code>def functionname([formal_args,] *var_args_tuple ):<br>"function_docstring"<br>function_suite<br>return [expression]</code>
+			
+			<p>An asterisk (*) is placed before the variable name that holds the values of all nonkeyword variable arguments. This tuple remains empty if no additional arguments are specified during the function call. Following is a simple example &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def printinfo( arg1, *vartuple ):<br>"This prints a variable passed arguments"<br>print "Output is: "<br>print arg1<br>for var in vartuple:<br>print var<br>return;<br># Now you can call printinfo function<br>printinfo( 10 )<br>printinfo( 70, 60, 50 )</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Output is:<br>10<br>Output is:<br>70<br>60<br>50</code>
+
+			<h3>The <i>Anonymous</i> Functions</h3>
+			
+			<p>These functions are called anonymous because they are not declared in the standard manner by using the <i>def</i> keyword. You can use the <i>lambda</i> keyword to create small anonymous functions.</p>
+			
+			<ul>
+				<li><p>Lambda forms can take any number of arguments but return just one value in the form of an expression. They cannot contain commands or multiple expressions.</p></li>
+				<li><p>An anonymous function cannot be a direct call to print because lambda requires an expression</p></li>
+				<li><p>Lambda functions have their own local namespace and cannot access variables other than those in their parameter list and those in the global namespace.</p></li>
+				<li><p>Although it appears that lambda's are a one-line version of a function, they are not equivalent to inline statements in C or C++, whose purpose is by passing function stack allocation during invocation for performance reasons.</p></li>
+			</ul>
+			
+			<h3>Syntax</h3>
+
+			<p>The syntax of <i>lambda</i> functions contains only a single statement, which is as follows &minus;</p>
+			
+			<code>lambda [arg1 [,arg2,.....argn]]:expression</code>
+
+			<p>Following is the example to show how <i>lambda</i> form of function works &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>sum = lambda arg1, arg2: arg1 + arg2;<br># Now you can call sum as a function<br>print "Value of total : ", sum( 10, 20 )<br>print "Value of total : ", sum( 20, 20 )</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Value of total :  30<br>Value of total :  40</code>
+
+			<h3>The <i>return</i> Statement</h3>
+
+			<p>The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.</p>
+			<p>All the above examples are not returning any value. You can return a value from a function as follows &minus;</p>
+			
+			<code>#!/usr/bin/python<br># Function definition is here<br>def sum( arg1, arg2 ):<br># Add both the parameters and return them."<br>total = arg1 + arg2<br>print "Inside the function : ", total<br>return total;<br># Now you can call sum function<br>total = sum( 10, 20 );<br>print "Outside the function : ", total</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Inside the function :  30<br>Outside the function :  30</code>
+
+			<h3>Scope of Variables</h3>
+
+			<p>All variables in a program may not be accessible at all locations in that program. This depends on where you have declared a variable.</p>
+			<p>The scope of a variable determines the portion of the program where you can access a particular identifier. There are two basic scopes of variables in Python  &minus;</p>
+			
+			<ul>
+				<li>Global variables</li>
+				<li>Local variables</li>
+			</ul>
+
+			<h3>Global vs. Local variables</h3>
+			
+			<p>Variables that are defined inside a function body have a local scope, and those defined outside have a global scope.</p>
+			<p>This means that local variables can be accessed only inside the function in which they are declared, whereas global variables can be accessed throughout the program body by all functions. When you call a function, the variables declared inside it are brought into scope. Following is a simple example &minus;</p>
+			
+			<code>#!/usr/bin/python<br>total = 0; # This is global variable.<br># Function definition is here<br>def sum( arg1, arg2 ):<br># Add both the parameters and return them."<br>total = arg1 + arg2; # Here total is local variable.<br>print "Inside the function local total : ", total<br>return total;<br># Now you can call sum function<br>sum( 10, 20 );<br>print "Outside the function global total : ", total</code>
+
+			<p>When the above code is  executed, it produces the following result &minus;</p>
+			
+			<code>Inside the function local total :  30<br>Outside the function global total :  0</code>
+
+    	</section>
+    
+
+    	<footer>
+    		<hr>
+    		<p>This webpage is created for showcase purposes only.</p>
+    		<p>This page is a part of the freeCodeCamp - "Responsive Web Design Projects" certification program</p>
+    		<p>Developed by <a href="https://github.com/valeriybercha" target="_blank">Valeriy Bercha</a></p>
+    		<p>Materials belong to <a href="https://www.tutorialspoint.com/python/index.htm" target="_blank">TutorialsPoint</a></p>
+    	</footer>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
