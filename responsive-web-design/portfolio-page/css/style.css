@@ -1,0 +1,166 @@
+/* Portfolio page styling */
+
+
+/* General settings */
+
+
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: Roboto Mono, monospace;
+}
+
+
+p {
+  margin: 5px;
+  padding-bottom: 15px;
+}
+
+
+a {
+  color: #f36d33;
+}
+
+
+a:visited {
+  text-decoration: none;
+}
+
+
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Navigation */
+
+
+#navbar {
+  background-color: rgb(201, 201, 201);
+  position: fixed;
+  top: 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+ul.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+}
+
+
+ul.navigation li {
+  display: inline;
+  float: left;
+}
+
+
+ul.navigation li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Roboto Mono, monospace;
+}
+
+
+ul.navigation li a:hover {
+  background-color: #f36d33;
+  color: white;
+}
+
+
+/* Main section */
+
+
+main {
+  margin-top: 47px;
+  margin-bottom: 70px;
+}
+
+
+#welcome-section {
+  height: 100vh;
+}
+
+.center img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center h1, .center p, #contact h3, #contact p {
+  text-align: center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.project-tile {
+  margin-bottom: 70px;
+}
+
+
+code {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 95%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+
+/* Footer */
+
+
+footer p {
+  text-align: center;
+}
+
+
+footer hr {
+  color: #f36d33;
+}
+
+
+/* Media queries */
+
+
+@media (max-width: 768px) {
+  #navbar {
+  background-color: rgb(201, 201, 201);
+  }
+}
